@@ -133,16 +133,16 @@ body {
 
 .chatbot-container {
     width: 100%;
-    height: 500px;
+    max-width: 500px;
+    margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
-    background: #fff;
 }
 
-.chatbot-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+df-messenger {
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
 }
 
 /* FOOTER */
@@ -167,6 +167,10 @@ body {
 
     .hero h2 {
         font-size: 1.8rem;
+    }
+
+    .chatbot-container {
+        max-width: 100%;
     }
 }
 </style>
@@ -271,12 +275,13 @@ body {
             </p>
 
             <div class="chatbot-container">
-                <iframe
-                allow="microphone;"
-                width="350"
-                height="430"
-                src="https://console.dialogflow.com/api-client/demo/embedded/6f437ffc-734a-4acf-816d-2dffbfcb982b">
-            </iframe>
+                <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+                <df-messenger
+                    project-id="YOUR_PROJECT_ID"
+                    agent-id="YOUR_AGENT_ID"
+                    language-code="fr">
+                    <df-messenger-chat-bubble></df-messenger-chat-bubble>
+                </df-messenger>
             </div>
 
             <p style="text-align:center; margin-top:20px; font-size:0.9rem; color:#ccc;">
