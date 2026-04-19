@@ -275,11 +275,13 @@ df-messenger {
             </p>
 
             <div class="chatbot-container">
-                <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+                <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
                 <df-messenger
-                    project-id="YOUR_PROJECT_ID"
-                    agent-id="YOUR_AGENT_ID"
-                    language-code="fr">
+
+                    intent="WELCOME"
+                chat-title="chatbotsecuritecambriolage"
+                 agent-id="6f437ffc-734a-4acf-816d-2dffbfcb982b"
+                 language-code="fr"
                     <df-messenger-chat-bubble></df-messenger-chat-bubble>
                 </df-messenger>
             </div>
